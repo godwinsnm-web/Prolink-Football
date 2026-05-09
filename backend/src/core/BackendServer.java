@@ -113,7 +113,7 @@ public class BackendServer {
                 String password = extractJsonField(body, "password");
                 if ("admin".equals(username) && "admin".equals(password)) {
                     sendResponse(t, 200, "{\"token\":\"admin-token\",\"role\":\"ADMIN\",\"username\":\"" + username + "\"}");
-                } else if (username != null && password != null) {
+                } else if ("vijai".equals(username) && "vijai".equals(password)) {
                     sendResponse(t, 200, "{\"token\":\"user-token\",\"role\":\"USER\",\"username\":\"" + username + "\"}");
                 } else {
                     sendResponse(t, 401, "{\"error\":\"Invalid credentials\"}");
